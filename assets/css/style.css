@@ -18,6 +18,11 @@ sass --watch assets/scss/main.scss:assets/css/style.css
   margin: 0 auto;
   padding: 0 15px;
 }
+@media (min-width: 0px) {
+  .container {
+    width: 300px;
+  }
+}
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -254,6 +259,13 @@ sass --watch assets/scss/main.scss:assets/css/style.css
   zoom: 1;
 }
 
+* {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 35px;
+}
+
 .header .menu_bar {
   display: none;
 }
@@ -396,15 +408,38 @@ sass --watch assets/scss/main.scss:assets/css/style.css
   }
 }
 
-* {
-  font-family: "Raleway", sans-serif;
-  margin: 0;
-  padding: 0;
+.hero {
+  width: 650px;
+  height: 30px;
+  margin: 100px;
 }
-
+.hero__title {
+  font-size: 40px;
+}
 .hero__info {
   z-index: 1;
-  border: 1 solid blue;
+}
+@media (min-width: 0px) {
+  .hero {
+    margin: 0;
+    width: 350px;
+    height: 20px;
+    margin-bottom: 50px;
+  }
+}
+@media (min-width: 768px) {
+  .hero {
+    width: 650px;
+    height: 30px;
+    margin: 100px;
+  }
+}
+@media (min-width: 992px) {
+  .hero {
+    width: 650px;
+    height: 30px;
+    margin: 100px;
+  }
 }
 
 .bg-hero {
@@ -414,8 +449,9 @@ sass --watch assets/scss/main.scss:assets/css/style.css
   .bg-hero {
     position: relative;
     right: 200px;
-    width: 700px;
+    width: 550px;
     height: 500px;
+    margin-top: 100px;
   }
 }
 @media (min-width: 768px) {
@@ -432,8 +468,64 @@ sass --watch assets/scss/main.scss:assets/css/style.css
 }
 @media (min-width: 1200px) {
   .bg-hero {
+    position: relative;
+    right: 50px;
     width: 100%;
     height: 100%;
+  }
+}
+
+.features {
+  margin: 80px;
+}
+.features__carac {
+  display: block;
+  font-size: 35px;
+  text-align: center;
+  margin: 80px;
+}
+.features__title {
+  font-size: 30px;
+}
+@media (min-width: 0px) {
+  .features {
+    margin: 0;
+  }
+  .features__carac {
+    text-align: left;
+    justify-content: left;
+  }
+  .features__title {
+    margin-top: 50px;
+    text-align: left;
+  }
+}
+@media (min-width: 768px) {
+  .features {
+    margin: 80px;
+  }
+  .features__carac {
+    display: block;
+    font-size: 35px;
+    text-align: center;
+    margin: 80px;
+  }
+  .features__title {
+    font-size: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .features {
+    margin: 80px;
+  }
+  .features__carac {
+    display: block;
+    font-size: 35px;
+    text-align: center;
+    margin: 80px;
+  }
+  .features__title {
+    font-size: 30px;
   }
 }
 
@@ -442,9 +534,9 @@ sass --watch assets/scss/main.scss:assets/css/style.css
     background-image: url("/assets/images/bg-price.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right;
-    height: 1600px;
-    width: 500px;
+    background-position: center;
+    height: 1900px;
+    width: 400px;
   }
 }
 @media (min-width: 768px) {
@@ -461,6 +553,7 @@ sass --watch assets/scss/main.scss:assets/css/style.css
     background-image: url("/assets/images/bg-price.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: left;
     height: 800px;
     width: 1200px;
   }
@@ -470,6 +563,7 @@ sass --watch assets/scss/main.scss:assets/css/style.css
     background-image: url("/assets/images/bg-price.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: left;
     height: 800px;
     width: 1200px;
   }
@@ -516,11 +610,26 @@ sass --watch assets/scss/main.scss:assets/css/style.css
   .card {
     font-family: "Raleway", sans-serif;
     position: relative;
-    bottom: 1200px;
+    bottom: 1500px;
     background-color: white;
-    width: 350px;
-    height: 400px;
-    margin: 100px;
+    width: 300px;
+    height: 550px;
+    margin: 60px;
+  }
+  .card__button {
+    position: absolute;
+    top: 450px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    padding: 0.3rem 1.5rem;
+  }
+  .card__line {
+    position: absolute;
+    top: 429px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
   }
 }
 @media (min-width: 768px) {
@@ -532,6 +641,21 @@ sass --watch assets/scss/main.scss:assets/css/style.css
     width: 350px;
     height: 400px;
     margin: 100px;
+  }
+  .card__line {
+    position: absolute;
+    top: 300px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+  }
+  .card__button {
+    position: absolute;
+    top: 330px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    padding: 0.3rem 1.5rem;
   }
 }
 @media (min-width: 992px) {
@@ -561,7 +685,7 @@ sass --watch assets/scss/main.scss:assets/css/style.css
   animation: fadein 10s;
 }
 
-.pricess .prices__title {
+.pricess__title {
   position: relative;
   bottom: 550px;
   left: 500px;
@@ -569,34 +693,49 @@ sass --watch assets/scss/main.scss:assets/css/style.css
   color: #FFF;
   font-size: xx-large;
 }
-@media (min-width: 992px) {
-  .pricess .prices__title {
+@media (min-width: 0px) {
+  .pricess__title {
+    font-family: "Raleway", sans-serif;
+    position: relative;
+    bottom: 1500px;
+    left: 150px;
+  }
+}
+@media (min-width: 768px) {
+  .pricess__title {
     position: relative;
     bottom: 550px;
     left: 500px;
-    z-index: 1;
-    color: red;
-    font-size: xx-large;
+  }
+}
+@media (min-width: 992px) {
+  .pricess__title {
+    position: relative;
+    bottom: 550px;
+    left: 500px;
   }
 }
 
 .footer {
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  color: white;
+  position: relative;
+  bottom: 641px;
+  width: 102.5%;
+  height: 100px;
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+  background-color: #221D23;
+  font-size: 16px;
 }
 .footer__texto {
   display: inline;
-  float: left;
 }
 .footer__menu {
   display: inline-block;
 }
 .footer__navegacion {
-  width: 100%;
-  background-color: black;
-  height: 100%;
+  display: flex;
+  justify-content: space-around;
 }
 .footer__navegacion ul {
   list-style: none;
@@ -607,13 +746,38 @@ sass --watch assets/scss/main.scss:assets/css/style.css
 .footer__menu > li > a {
   display: block;
   padding: 15px 20px;
-  color: #353535;
-  font-family: "Open sans";
   text-decoration: none;
+  color: #FFF;
 }
 .footer__menu li a:hover {
   color: #CE7D35;
   transition: all 0.3s;
+}
+@media (min-width: 0px) {
+  .footer {
+    position: relative;
+    bottom: 1410px;
+    width: 400px;
+    height: 100px;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .footer {
+    position: relative;
+    bottom: 641px;
+    left: 0px;
+    width: 1200px;
+    height: 100px;
+  }
+}
+@media (min-width: 992px) {
+  .footer {
+    position: relative;
+    bottom: 641px;
+    width: 102.5%;
+    height: 100px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,6 +2,9 @@
   margin: 0 auto;
   padding: 0 15px;
 
+  @include respond-to($bp-sm){
+    width: 300px;
+  }
   @include respond-to($bp-md){
     width: 750px;
   }

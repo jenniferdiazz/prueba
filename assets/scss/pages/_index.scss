@@ -1,3 +1,9 @@
+*{
+    font-family: $primary-font;
+    margin: 0;
+    padding:0;
+    line-height: 35px;
+}
 .header{
 
     .menu_bar{
@@ -97,19 +103,47 @@
     
     
 }
-*{
-    font-family: $primary-font;
-    margin: 0;
-    padding:0;
+
+.hero{
+    width: 650px;
+    height: 30px;
+    margin:100px;
+    //border:1 solid blue;
+    &__title{
+        font-size: $xxx-large;
+    }
+
+    &__info{
+        //position: relative;
+        //top: 300px;
+        z-index: 1;
+        
+        
+        //margin: 80px;
+    }
+    @include respond-to($bp-sm){
+        margin:0;
+        width: 350px;
+    height: 20px;
+    margin-bottom: 50px;
+      }
+    
+      @include respond-to($bp-md){
+        width: 650px;
+        height: 30px;
+        margin:100px;
+      }
+    
+      @include respond-to($bp-lg){
+        width: 650px;
+    height: 30px;
+    margin:100px;
+    
+      }
+    
 }
 
-.hero__info{
-    //position: relative;
-    //top: 300px;
-    z-index: 1;
-    border:1 solid blue;
-    //margin: 80px;
-}
+
 .bg-hero{
     
    
@@ -117,8 +151,9 @@
     @include respond-to($bp-sm){
         position: relative;
         right: 200px;
-        width: 700px;
+        width: 550px;
         height: 500px;
+        margin-top: 100px;
         
         
       }
@@ -135,8 +170,68 @@
       }
     
       @include respond-to($bp-xl){
+          position: relative;
+          right: 50px;
         width: 100%;
         height: 100%;
+        
+    
+      }
+}
+.features{
+    margin:80px;
+    &__carac{
+        display: block;
+        font-size:$xx-large;
+        text-align: center;
+        margin:80px;
+    }
+    &__title{
+        font-size:$x-large;
+    }
+    @include respond-to($bp-sm){
+        margin:0;
+        &__carac{
+            
+            text-align: left;
+            justify-content: left;
+            
+        }
+        &__title{
+           
+            margin-top:50px;
+            text-align: left;
+            
+        }
+        
+    
+      }
+    
+      @include respond-to($bp-md){
+        
+        margin:80px;
+    &__carac{
+        display: block;
+        font-size:$xx-large;
+        text-align: center;
+        margin:80px;
+    }
+    &__title{
+        font-size:$x-large;
+    }
+      }
+    
+      @include respond-to($bp-lg){
+        margin:80px;
+    &__carac{
+        display: block;
+        font-size:$xx-large;
+        text-align: center;
+        margin:80px;
+    }
+    &__title{
+        font-size:$x-large;
+    }
     
       }
 }
@@ -154,9 +249,10 @@
     background-image: url('/assets/images/bg-price.svg');
     background-repeat: no-repeat;
             background-size: cover;
-            background-position: right;
-            height: 1600px;
-            width: 500px;
+            background-position: center;
+            height: 1900px;
+            width: 400px;
+           
         
         
       }
@@ -175,7 +271,7 @@
         background-image: url('/assets/images/bg-price.svg');
         background-repeat: no-repeat;
                 background-size: cover;
-                
+                background-position: left;
                 height: 800px;
                 width: 1200px;
       }
@@ -185,7 +281,7 @@
     background-image: url('/assets/images/bg-price.svg');
     background-repeat: no-repeat;
             background-size: cover;
-            
+            background-position: left;
             height: 800px;
             width: 1200px;
             
@@ -237,12 +333,30 @@
     @include respond-to($bp-sm){
         font-family: $primary-font;
         position: relative;
-        bottom:1200px;
+        bottom:1500px;
         //z-index: 1;
         background-color: white;
-        width: 350px;
-        height: 400px;
-        margin:100px;
+        width: 300px;
+        height: 550px;
+        margin:60px;
+        &__button{
+            position: absolute;
+            top: 450px;
+            bottom: 0px;
+           left: 0;
+           right: 0;
+        
+            padding: .3rem 1.5rem;
+            
+        }
+        &__line{
+            position: absolute;
+            top: 429px;
+            bottom: 0px;
+           left: 0;
+           right: 0;
+        }
+        
         
     
         
@@ -257,6 +371,23 @@
     width: 350px;
     height: 400px;
     margin:100px;
+    &__line{
+        position: absolute;
+        top: 300px;
+        bottom: 0px;
+       left: 0;
+       right: 0;
+    }
+    &__button{
+        position: absolute;
+        top: 330px;
+        bottom: 0px;
+       left: 0;
+       right: 0;
+    
+        padding: .3rem 1.5rem;
+        
+    }
 
       }
     
@@ -291,20 +422,35 @@
     
 }
 .pricess{
-    .prices__title{
+    &__title{
         position: relative;
         bottom:550px;
         left: 500px;
         z-index: 1;
         color:$white;
         font-size: xx-large;
+        @include respond-to($bp-sm){
+            font-family: $primary-font;
+            position: relative;
+            bottom:1500px;
+            left: 150px;
+            
+            
+        }
+        @include respond-to($bp-md){
+            position: relative;
+        bottom:550px;
+        left: 500px;
+       
+
+    
+        
+          }
         @include respond-to($bp-lg){
             position: relative;
         bottom:550px;
         left: 500px;
-        z-index: 1;
-        color:red;
-        font-size: xx-large;
+      
 
     
         
@@ -315,26 +461,61 @@
 }
 
 .footer{
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    color: white;
+    position: relative;
+    bottom: 641px;
+    width: 102.5%;
+    height: 100px;
+    margin:0;
+    padding: 0;
+    color:$white;
+    background-color: $raising-black;
+    
+    
+    font-size:$medium;
     &__texto{
         display: inline;
-        float: left;
+        
         
     }
     &__menu{
         display: inline-block;
     }
-    &__navegacion{width:100%; background-color:black; height: 100%;}
+    &__navegacion{display:flex; justify-content: space-around;}
     
     &__navegacion ul{ list-style: none;}
     
     &__menu > li{display: inline-block;}
     
-    &__menu > li >a{display: block; padding: 15px 20px; color:#353535; font-family: 'Open sans'; text-decoration: none;}
+    &__menu > li >a{display: block; padding: 15px 20px; text-decoration: none;color: $white;}
     
     &__menu li a:hover{color:#CE7D35; transition: all .3s;}
+
+    @include respond-to($bp-sm){
+        position: relative;
+        bottom: 1410px;
+        width: 400px;
+        height: 100px;
+        text-align: center;
+    }
+    @include respond-to($bp-md){
+        position: relative;
+    bottom: 641px;
+    left: 0px;
+    width: 1200px;
+    height: 100px;
+   
+
+
+    
+      }
+    @include respond-to($bp-lg){
+        position: relative;
+    bottom: 641px;
+    width: 102.5%;
+    height: 100px;
+
+
+    
+      }
     
 }
