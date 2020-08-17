@@ -17,7 +17,7 @@
         
         .header__menu li a:hover{color:#CE7D35; transition: all .3s;}
         .menu_bar{
-            display: none;
+            display: block;
             width: 100%;
             background: #ccc;
 
@@ -32,6 +32,9 @@
             font-size:25px;
 
         }
+        .header__menu{
+            display: none;
+        }
       }
     
       @include respond-to($bp-md){
@@ -39,7 +42,7 @@
               display: none;
           }
         .header__menu{
-            display: inline-block
+            display: inline-block;
         }
         .header__navegacion{width:1000px; background-color:white; margin: 30px auto; height: 50px;}
         
@@ -57,9 +60,9 @@
             display: none;
         }
         .header__menu{
-            display: inline-block
+            display: inline-block;
         }
-        .header__navegacion{width:1000px; background-color:white; margin: 30px auto; height: 50px;}
+        .header__navegacion{width:1000px; background-color:white; margin: 30px auto; height: 50px; display: flex; justify-content: space-around;}
         
         .header__navegacion ul{ list-style: none;}
         
@@ -72,13 +75,15 @@
       }
     
       @include respond-to($bp-xl){
+        
+          
+
         .menu_bar{
             display: none;
         }
-        .header__menu{
-            display: inline-block
-        }
-        .header__navegacion{width:1000px; background-color:white; margin: 30px auto; height: 50px;}
+        
+        .header__navegacion{width:1200px; background-color:white; margin: 30px auto; height: 50px; display: flex; justify-content: space-around;}
+        
         
         .header__navegacion ul{ list-style: none;}
         
@@ -184,6 +189,7 @@
             height: 800px;
             width: 1200px;
             
+            
     
       }
 }
@@ -280,7 +286,8 @@
     
       }
 }
-.features__info{
+.bg-bar{
+    animation: fadein 10s;
     
 }
 .pricess{
