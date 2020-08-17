@@ -1,0 +1,15 @@
+.button{
+    //font-family: $raleway;
+    font-weight: 700;
+    color:white;
+    background-color:$ball-blue;
+    border:none;
+    &_small{
+        padding: .3rem 1.5rem;
+    }
+    &_large{
+        width: 100%;
+        padding: .5rem 1rem
+    }
+
+}

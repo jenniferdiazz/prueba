@@ -14,3 +14,11 @@ sass --watch assets/scss/main.scss:assets/css/style.css
 
 //base
 @import "base/reset";
+//layaout
+@import "layout/grid";
+
+//components
+@import "components/button";
+
+//pages
+@import "pages/index";
